@@ -1,4 +1,8 @@
 
 default:
-	g++ -c -o snake.o snake.cc
-	g++ -o snake snake.o
+	mkdir -p ./out/obj ./out/bin
+	g++ -c -o ./out/obj/snake.o ./src/snake.cc
+	g++ -o ./out/bin/snake ./out/obj/snake.o
+
+run:
+	./out/bin/snake
